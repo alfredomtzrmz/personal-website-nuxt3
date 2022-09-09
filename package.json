@@ -8,6 +8,10 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@nuxtjs/color-mode": "^3.1.5",
+    "@nuxtjs/tailwindcss": "^5.3.3",
+    "eslint": "^8.23.0",
+    "eslint-plugin-nuxt": "^4.0.0",
     "nuxt": "3.0.0-rc.9"
   }
 }
