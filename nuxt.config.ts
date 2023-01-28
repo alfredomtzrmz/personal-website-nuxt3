@@ -6,7 +6,9 @@ export default defineNuxtConfig({
         lang: 'es-MX'
       },
       meta: [
-        {charset: "utf-8"},
+        {
+          charset: 'utf-8'
+        },
         {
           name: 'viewport',
           content: 'width=device-width, initial-scale=1'
@@ -25,8 +27,13 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
-    '@nuxtjs/google-fonts'
+    '@nuxtjs/google-fonts',
+    'nuxt-headlessui',
+    '@vueuse/nuxt',
   ],
+  colorMode: {
+    classSuffix: ''
+  },
   googleFonts: {
     families: {
       Inter: {
@@ -37,7 +44,7 @@ export default defineNuxtConfig({
       }
     },
   },
-  colorMode: {
-    classSuffix: ''
+  headlessui: {
+    prefix: 'Headless'
   }
 })
