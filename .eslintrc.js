@@ -1,20 +1,29 @@
 module.exports = {
-    root: true,
-    env: {
-        browser: true,
-        node: true
-    },
-    parserOptions: {
-        parser: 'babel-eslint'
-    },
-    extends: [
-        '@nuxtjs/eslint-config-typescript',
-        'plugin:nuxt/recommended'
-    ],
-    plugins: [],
-    // add your custom rules here
-    rules: {
-        'vue/max-attributes-per-line': 'off',
-        'vue/no-v-html': 0
-    }
+  root: true,
+
+  env: {
+    browser: true,
+    node: true,
+  },
+
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: 'module',
+    parser: '@typescript-eslint/parser',
+  },
+
+  extends: [
+    'plugin:@typescript-eslint/recommended',
+    'plugin:nuxt/recommended',
+    'plugin:vue/vue3-recommended',
+    'plugin:prettier/recommended',
+  ],
+
+  plugins: ['@typescript-eslint'],
+
+  rules: {
+    'vue/max-attributes-per-line': 'off',
+    'vue/multi-word-component-names': 'off',
+    'vue/no-v-html': 0,
+  },
 }
