@@ -18,10 +18,10 @@ export default defineNuxtConfig({
           content: '',
         },
       ],
-      title: 'Isidro Martínez | Software Developer',
+      title: 'Alfredo Martínez | Software Developer',
       bodyAttrs: {
         class:
-          'antialiased font-inter bg-zinc-50 dark:bg-black transition-colors duration-100',
+          'antialiased font-inter bg-zinc-50 transition-colors duration-100 h-full',
       },
     },
   },
@@ -31,8 +31,20 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     '@nuxt/image-edge',
     '@vueuse/nuxt',
-    'nuxt-headlessui',
+    // pinia plugin - https://pinia.esm.dev
+    '@pinia/nuxt',
   ],
+  build: {
+    transpile: ['@heroicons/vue', '@headlessui/vue'],
+  },
+  typescript: {
+    tsConfig: {
+      compilerOptions: {
+        strict: true,
+        types: ['@pinia/nuxt', './type.d.ts'],
+      },
+    },
+  },
   components: [
     {
       path: '~/components',
@@ -52,7 +64,7 @@ export default defineNuxtConfig({
       },
     },
   },
-  headlessui: {
-    prefix: 'Headless',
+  runtimeConfig: {
+    API_BASE_URL: process.env.LARAVEL_API_URL,
   },
 })
