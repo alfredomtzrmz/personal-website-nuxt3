@@ -26,10 +26,10 @@
             <aside
               class="flex min-h-0 flex-1 flex-col border-r bg-gray-50 overflow-y-auto px-6 transition duration-200 ease-in-out border-gray-150 dark:border-gray-800 dark:bg-gray-900"
             >
-              <div class="flex flex-1 flex-col pt-10 pb-4">
+              <div class="flex flex-1 flex-col py-5">
                 <nuxt-link
                   to="/about"
-                  class="flex flex-shrink-0 items-center space-x-3"
+                  class="flex flex-shrink-0 items-center space-x-3 focus:outline-none focus:ring-0"
                 >
                   <nuxt-img
                     src="/images/avatar.jpg"
