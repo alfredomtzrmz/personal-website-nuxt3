@@ -25,6 +25,11 @@ export default defineNuxtConfig({
       },
     },
   },
+  appConfig: {
+    nuxtIcon: {
+      size: '16px',
+    },
+  },
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
@@ -33,6 +38,8 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     // pinia plugin - https://pinia.esm.dev
     '@pinia/nuxt',
+    // nuxt-icon - https://nuxt.com/modules/icon
+    'nuxt-icon',
   ],
   build: {
     transpile: ['@heroicons/vue', '@headlessui/vue'],

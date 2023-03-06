@@ -1,6 +1,6 @@
 <template>
   <div class="navbar">
-    <nuxt-link to="/about" class="flex flex-shrink-0 items-center space-x-3">
+    <nuxt-link to="/about" class="flex items-center space-x-3">
       <nuxt-img
         src="/images/avatar.jpg"
         format="png"

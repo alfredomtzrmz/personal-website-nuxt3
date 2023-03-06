@@ -1,6 +1,6 @@
 <template>
   <TransitionRoot as="template" :show="sidebar.show">
-    <Dialog as="div" class="relative z-40 lg:hidden" @close="sidebar.close()">
+    <div class="relative z-40 lg:hidden sidebarWrapper">
       <TransitionChild
         as="template"
         enter="transition-opacity ease-linear duration-150"
@@ -10,9 +10,11 @@
         leave-from="opacity-100"
         leave-to="opacity-0"
       >
-        <div class="fixed inset-0 dark:bg-gray-900/95 backdrop-blur-lg" />
+        <div
+          class="fixed inset-0 dark:bg-gray-900/95 bg-gray-50/95 backdrop-blur-sm"
+        />
       </TransitionChild>
-      <div class="fixed inset-0 z-40 flex">
+      <div class="fixed inset-0 z-40 flex" @click="sidebar.close()">
         <TransitionChild
           as="template"
           enter="transition ease-in-out duration-150 transform"
@@ -22,11 +24,11 @@
           leave-from="translate-x-0"
           leave-to="-translate-x-full"
         >
-          <DialogPanel class="relative flex w-[16rem] flex-col">
+          <div class="relative flex w-[16rem] flex-col">
             <aside
               class="flex min-h-0 flex-1 flex-col border-r bg-gray-50 overflow-y-auto px-6 transition duration-200 ease-in-out border-gray-150 dark:border-gray-800 dark:bg-gray-900"
             >
-              <div class="flex flex-1 flex-col py-5">
+              <div class="flex flex-1 flex-col pt-5">
                 <nuxt-link
                   to="/about"
                   class="flex flex-shrink-0 items-center space-x-3 focus:outline-none focus:ring-0"
@@ -61,15 +63,14 @@
                         'group flex items-center rounded-md py-2 space-x-[.625rem] px-3 transition-all ease-in duration-300',
                       ]"
                     >
-                      <component
-                        :is="item.icon"
+                      <Icon
+                        :name="item.icon"
                         :class="[
                           item.current
                             ? 'dark:text-teal-400 text-teal-500'
                             : 'text-gray-700 dark:text-white/40 group-hover:text-teal-500 group:dark-hover:text-teal-400',
                           'h-5 w-5 flex-shrink-0 transition-all ease-in duration-300',
                         ]"
-                        aria-hidden="true"
                       />
                       <span class="text-sm">
                         {{ item.name }}
@@ -94,15 +95,14 @@
                           'group flex items-center rounded-md py-2 space-x-[.625rem] px-3 transition-all ease-in duration-300',
                         ]"
                       >
-                        <component
-                          :is="item.icon"
+                        <Icon
+                          :name="item.icon"
                           :class="[
                             item.current
                               ? 'dark:text-teal-400 text-teal-500'
                               : 'text-gray-700 dark:text-white/40 group-hover:text-teal-500 group:dark-hover:text-teal-400',
                             'h-5 w-5 flex-shrink-0 transition-all ease-in duration-300',
                           ]"
-                          aria-hidden="true"
                         />
                         <span class="text-sm">
                           {{ item.name }}
@@ -128,15 +128,14 @@
                           'group flex items-center rounded-md py-2 space-x-[.625rem] px-3 transition-all ease-in duration-300',
                         ]"
                       >
-                        <component
-                          :is="item.icon"
+                        <Icon
+                          :name="item.icon"
                           :class="[
                             item.current
                               ? 'dark:text-teal-400 text-teal-500'
                               : 'text-gray-700 dark:text-white/40 group-hover:text-teal-500 group:dark-hover:text-teal-400',
                             'h-5 w-5 flex-shrink-0 transition-all ease-in duration-300',
                           ]"
-                          aria-hidden="true"
                         />
                         <span class="text-sm">
                           {{ item.name }}
@@ -146,36 +145,12 @@
                   </div>
                 </nav>
               </div>
-              <div class="flex flex-shrink-0 border-t border-gray-200 p-4">
-                <a href="#" class="block w-full flex-shrink-0 group">
-                  <div class="flex items-center">
-                    <div>
-                      <img
-                        class="inline-block h-9 w-9 rounded-full"
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                        alt=""
-                      />
-                    </div>
-                    <div class="ml-3">
-                      <p
-                        class="text-sm font-medium text-gray-700 group-hover:text-gray-900"
-                      >
-                        Tom Cook
-                      </p>
-                      <p
-                        class="text-xs font-medium text-gray-500 group-hover:text-gray-700"
-                      >
-                        View profile
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </div>
+              <!--bottom buttons-->
             </aside>
-          </DialogPanel>
+          </div>
         </TransitionChild>
       </div>
-    </Dialog>
+    </div>
   </TransitionRoot>
   <!-- Static sidebar for desktop -->
   <aside class="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-64 lg:flex-col">
@@ -215,15 +190,14 @@
                 'group flex items-center rounded-md py-2 space-x-[.625rem] px-3 transition-all ease-in duration-300',
               ]"
             >
-              <component
-                :is="item.icon"
+              <Icon
+                :name="item.icon"
                 :class="[
                   item.current
                     ? 'dark:text-teal-400 text-teal-500'
                     : 'text-gray-700 dark:text-white/40 group-hover:text-teal-500 group:dark-hover:text-teal-400',
                   'h-5 w-5 flex-shrink-0 transition-all ease-in duration-300',
                 ]"
-                aria-hidden="true"
               />
               <span class="text-sm">
                 {{ item.name }}
@@ -246,15 +220,14 @@
                   'group flex items-center rounded-md py-2 space-x-[.625rem] px-3 transition-all ease-in duration-300',
                 ]"
               >
-                <component
-                  :is="item.icon"
+                <Icon
+                  :name="item.icon"
                   :class="[
                     item.current
                       ? 'dark:text-teal-400 text-teal-500'
                       : 'text-gray-700 dark:text-white/40 group-hover:text-teal-500 group:dark-hover:text-teal-400',
                     'h-5 w-5 flex-shrink-0 transition-all ease-in duration-300',
                   ]"
-                  aria-hidden="true"
                 />
                 <span class="text-sm">
                   {{ item.name }}
@@ -278,15 +251,14 @@
                   'group flex items-center rounded-md py-2 space-x-[.625rem] px-3 transition-all ease-in duration-300',
                 ]"
               >
-                <component
-                  :is="item.icon"
+                <Icon
+                  :name="item.icon"
                   :class="[
                     item.current
                       ? 'dark:text-teal-400 text-teal-500'
                       : 'text-gray-700 dark:text-white/40 group-hover:text-teal-500 group:dark-hover:text-teal-400',
                     'h-5 w-5 flex-shrink-0 transition-all ease-in duration-300',
                   ]"
-                  aria-hidden="true"
                 />
                 <span class="text-sm">
                   {{ item.name }}
@@ -296,77 +268,91 @@
           </div>
         </nav>
       </div>
-      <div class="flex flex-shrink-0 border-t border-gray-200 p-4">
-        <a href="#" class="block w-full flex-shrink-0 group">
-          <div class="flex items-center">
-            <div>
-              <img
-                class="inline-block h-9 w-9 rounded-full"
-                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                alt=""
-              />
-            </div>
-            <div class="ml-3">
-              <p
-                class="text-sm font-medium text-gray-700 group-hover:text-gray-900"
-              >
-                Tom Cook
-              </p>
-              <p
-                class="text-xs font-medium text-gray-500 group-hover:text-gray-700"
-              >
-                View profile
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
+      <!--bottom buttons-->
     </div>
   </aside>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { useSidebarStore } from '~/store/sidebar'
-import {
-  Dialog,
-  DialogPanel,
-  TransitionChild,
-  TransitionRoot,
-} from '@headlessui/vue'
-import {
-  RocketLaunchIcon,
-  BriefcaseIcon,
-  HandRaisedIcon,
-  WrenchIcon,
-  BoltIcon,
-  BookmarkIcon,
-  ChatBubbleLeftRightIcon,
-  NewspaperIcon,
-} from '@heroicons/vue/24/outline'
+import { TransitionChild, TransitionRoot } from '@headlessui/vue'
+
+const sidebar = useSidebarStore()
 
 const navigationMain = [
-  { name: 'Explore', href: '/', icon: RocketLaunchIcon, current: true },
-  { name: 'Projects', href: '/projects', icon: BriefcaseIcon, current: false },
-  { name: 'Writing', href: '#', icon: NewspaperIcon, current: false },
+  { name: 'Explore', href: '/', icon: 'heroicons:home', current: true },
+  {
+    name: 'Projects',
+    href: '/projects',
+    icon: 'heroicons:briefcase',
+    current: false,
+  },
+  { name: 'Writing', href: '#', icon: 'heroicons:newspaper', current: false },
 ]
 
 const navigationMe = [
-  { name: 'Bookmarks', href: '#', icon: BookmarkIcon, current: false },
-  { name: 'AMA', href: '#', icon: ChatBubbleLeftRightIcon, current: false },
-  { name: 'Stack', href: '#', icon: WrenchIcon, current: false },
-  { name: 'Now', href: '#', icon: BoltIcon, current: false },
-  { name: 'Hire Me', href: '#', icon: HandRaisedIcon, current: false },
+  { name: 'Bookmarks', href: '#', icon: 'heroicons:bookmark', current: false },
+  {
+    name: 'AMA',
+    href: '#',
+    icon: 'heroicons:chat-bubble-left-right',
+    current: false,
+  },
+  {
+    name: 'Stack',
+    href: '#',
+    icon: 'heroicons:wrench-screwdriver',
+    current: false,
+  },
+  { name: 'Now', href: '#', icon: 'heroicons:bolt', current: false },
+  {
+    name: 'Hire Me',
+    href: '#',
+    icon: 'iconoir:brain-electricity',
+    current: false,
+  },
 ]
 
 const navigationSocial = [
-  { name: 'Twitter', href: '#', icon: BookmarkIcon, current: false },
+  { name: 'Twitter', href: '#', icon: 'ph:twitter-logo', current: false },
   {
     name: 'LinkedIn',
     href: '#',
-    icon: ChatBubbleLeftRightIcon,
+    icon: 'ph:linkedin-logo',
     current: false,
   },
-  { name: 'Github', href: '#', icon: WrenchIcon, current: false },
+  { name: 'Github', href: '#', icon: 'ph:github-logo', current: false },
 ]
-const sidebar = useSidebarStore()
+
+watch(
+  () => sidebar.show,
+  (value: boolean) => {
+    if (!useNuxtApp().ssrContext) {
+      if (value) {
+        hideScrollbar()
+      } else {
+        setTimeout(() => {
+          showScrollbar()
+        }, 150)
+      }
+    }
+  },
+  { immediate: true }
+)
+
+function showScrollbar() {
+  const body = document.body as HTMLElement
+  body.removeAttribute('style')
+}
+
+function hideScrollbar() {
+  const body = document.body as HTMLElement
+
+  let scrollbarWidth = window.innerWidth - document.documentElement.clientWidth
+
+  if (scrollbarWidth != 0) {
+    body.style.paddingRight = `${scrollbarWidth}px`
+  }
+  body.style.overflow = 'hidden'
+}
 </script>
