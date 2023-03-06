@@ -22,6 +22,7 @@ module.exports = {
   plugins: ['@typescript-eslint'],
 
   rules: {
+    '@typescript-eslint/no-var-requires': 0,
     'vue/max-attributes-per-line': 'off',
     'vue/multi-word-component-names': 'off',
     'vue/no-v-html': 0,

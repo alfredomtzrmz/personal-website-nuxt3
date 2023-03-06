@@ -18,10 +18,10 @@ export default defineNuxtConfig({
           content: '',
         },
       ],
-      title: 'Alfredo Martínez | Software Developer',
+      title: 'Alfredo Martínez | FrontEnd Engineer',
       bodyAttrs: {
         class:
-          'antialiased font-inter bg-zinc-50 transition-colors duration-100 h-full',
+          'antialiased font-inter bg-white dark:bg-black transition-colors duration-100 h-full',
       },
     },
   },
@@ -64,7 +64,5 @@ export default defineNuxtConfig({
       },
     },
   },
-  runtimeConfig: {
-    API_BASE_URL: process.env.LARAVEL_API_URL,
-  },
+  runtimeConfig: {},
 })

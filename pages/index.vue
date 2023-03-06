@@ -1,5 +1,5 @@
 <template>
-  <div class="my-10">
+  <div class="dark:text-white">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, facilis
     magni maxime sapiente sint sit. At, aut beatae blanditiis consectetur
     deleniti deserunt dolor dolores ducimus eius eos eum, ex explicabo harum id
