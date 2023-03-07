@@ -21,7 +21,7 @@ export default defineNuxtConfig({
       title: 'Alfredo Martínez | FrontEnd Engineer',
       bodyAttrs: {
         class:
-          'antialiased font-inter bg-white dark:bg-black transition-colors duration-100 h-full',
+          'antialiased font-inter bg-white dark:bg-[#161616] transition-colors duration-100 h-full',
       },
     },
   },

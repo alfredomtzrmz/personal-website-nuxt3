@@ -1,6 +1,6 @@
 <template>
   <TransitionRoot as="template" :show="sidebar.show">
-    <div class="relative z-40 lg:hidden sidebarWrapper">
+    <div class="relative z-40 xl:hidden sidebarWrapper">
       <TransitionChild
         as="template"
         enter="transition-opacity ease-linear duration-150"
@@ -96,7 +96,7 @@
     </div>
   </TransitionRoot>
   <!-- Static sidebar for desktop -->
-  <aside class="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-64 lg:flex-col">
+  <aside class="hidden xl:fixed xl:inset-y-0 xl:flex xl:w-64 xl:flex-col">
     <div
       class="flex min-h-0 flex-1 overflow-y-auto flex-col border-r bg-gray-50 px-6 transition duration-200 ease-in-out border-gray-150 dark:border-gray-800 dark:bg-gray-900"
     >

@@ -28,13 +28,13 @@
   </div>
 </template>
 <script setup>
-import { useSidebarStore } from '@/store/sidebar'
+import { useSidebarStore } from '@/store/sidebar';
 
-const sidebar = useSidebarStore()
+const sidebar = useSidebarStore();
 </script>
 
 <style lang="scss" scoped>
 .navbar {
-  @apply sticky top-0 z-10 flex items-center justify-between border-b bg-gray-50 p-5 dark:border-gray-800 dark:bg-black lg:hidden;
+  @apply sticky top-0 z-10 flex items-center justify-between border-b bg-gray-50 p-5 dark:border-gray-800 dark:bg-[#161616] xl:hidden;
 }
 </style>
