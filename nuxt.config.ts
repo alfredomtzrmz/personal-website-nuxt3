@@ -42,7 +42,7 @@ export default defineNuxtConfig({
     'nuxt-icon',
   ],
   build: {
-    transpile: ['@heroicons/vue', '@headlessui/vue'],
+    transpile: ['@headlessui/vue'],
   },
   typescript: {
     tsConfig: {
@@ -72,4 +72,4 @@ export default defineNuxtConfig({
     },
   },
   runtimeConfig: {},
-})
+});

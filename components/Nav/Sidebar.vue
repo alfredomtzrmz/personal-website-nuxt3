@@ -52,30 +52,11 @@
                 </nuxt-link>
                 <nav class="mt-10 flex-1 flex-col space-y-8">
                   <div class="space-y-0.5 flex flex-col">
-                    <nuxt-link
+                    <SidebarItem
                       v-for="item in navigationMain"
                       :key="item.name"
-                      :to="item.href"
-                      :class="[
-                        item.current
-                          ? 'dark:text-teal-400 dark:bg-gray-800 bg-gray-200/40 text-teal-500'
-                          : 'dark:text-white/40 text-gray-700 hover:text-teal-500 dark:hover:text-teal-400',
-                        'group flex items-center rounded-md py-2 space-x-[.625rem] px-3 transition-all ease-in duration-300',
-                      ]"
-                    >
-                      <Icon
-                        :name="item.icon"
-                        :class="[
-                          item.current
-                            ? 'dark:text-teal-400 text-teal-500'
-                            : 'text-gray-700 dark:text-white/40 group-hover:text-teal-500 group:dark-hover:text-teal-400',
-                          'h-5 w-5 flex-shrink-0 transition-all ease-in duration-300',
-                        ]"
-                      />
-                      <span class="text-sm">
-                        {{ item.name }}
-                      </span>
-                    </nuxt-link>
+                      :item="item"
+                    />
                   </div>
                   <div class="space-y-3 flex flex-col">
                     <h4
@@ -84,30 +65,11 @@
                       Me
                     </h4>
                     <div class="flex flex-col space-y-0.5">
-                      <nuxt-link
+                      <SidebarItem
                         v-for="item in navigationMe"
                         :key="item.name"
-                        :to="item.href"
-                        :class="[
-                          item.current
-                            ? 'dark:text-teal-400 dark:bg-gray-800 bg-gray-200/40 text-teal-500'
-                            : 'dark:text-white/40 text-gray-700 hover:text-teal-500 dark:hover:text-teal-400',
-                          'group flex items-center rounded-md py-2 space-x-[.625rem] px-3 transition-all ease-in duration-300',
-                        ]"
-                      >
-                        <Icon
-                          :name="item.icon"
-                          :class="[
-                            item.current
-                              ? 'dark:text-teal-400 text-teal-500'
-                              : 'text-gray-700 dark:text-white/40 group-hover:text-teal-500 group:dark-hover:text-teal-400',
-                            'h-5 w-5 flex-shrink-0 transition-all ease-in duration-300',
-                          ]"
-                        />
-                        <span class="text-sm">
-                          {{ item.name }}
-                        </span>
-                      </nuxt-link>
+                        :item="item"
+                      />
                     </div>
                   </div>
                   <div class="space-y-3 flex flex-col">
@@ -117,30 +79,11 @@
                       Social
                     </h4>
                     <div class="flex flex-col space-y-0.5">
-                      <nuxt-link
+                      <SidebarItem
                         v-for="item in navigationSocial"
                         :key="item.name"
-                        :to="item.href"
-                        :class="[
-                          item.current
-                            ? 'dark:text-teal-400 dark:bg-gray-800 bg-gray-200/40 text-teal-500'
-                            : 'dark:text-white/40 text-gray-700 hover:text-teal-500 dark:hover:text-teal-400',
-                          'group flex items-center rounded-md py-2 space-x-[.625rem] px-3 transition-all ease-in duration-300',
-                        ]"
-                      >
-                        <Icon
-                          :name="item.icon"
-                          :class="[
-                            item.current
-                              ? 'dark:text-teal-400 text-teal-500'
-                              : 'text-gray-700 dark:text-white/40 group-hover:text-teal-500 group:dark-hover:text-teal-400',
-                            'h-5 w-5 flex-shrink-0 transition-all ease-in duration-300',
-                          ]"
-                        />
-                        <span class="text-sm">
-                          {{ item.name }}
-                        </span>
-                      </nuxt-link>
+                        :item="item"
+                      />
                     </div>
                   </div>
                 </nav>
@@ -179,60 +122,22 @@
         </nuxt-link>
         <nav class="mt-10 flex-1 flex-col space-y-8">
           <div class="space-y-0.5 flex flex-col">
-            <nuxt-link
+            <SidebarItem
               v-for="item in navigationMain"
               :key="item.name"
-              :to="item.href"
-              :class="[
-                item.current
-                  ? 'dark:text-teal-400 dark:bg-gray-800 bg-gray-200/40 text-teal-500'
-                  : 'dark:text-white/40 text-gray-700 hover:text-teal-500 dark:hover:text-teal-400',
-                'group flex items-center rounded-md py-2 space-x-[.625rem] px-3 transition-all ease-in duration-300',
-              ]"
-            >
-              <Icon
-                :name="item.icon"
-                :class="[
-                  item.current
-                    ? 'dark:text-teal-400 text-teal-500'
-                    : 'text-gray-700 dark:text-white/40 group-hover:text-teal-500 group:dark-hover:text-teal-400',
-                  'h-5 w-5 flex-shrink-0 transition-all ease-in duration-300',
-                ]"
-              />
-              <span class="text-sm">
-                {{ item.name }}
-              </span>
-            </nuxt-link>
+              :item="item"
+            />
           </div>
           <div class="space-y-3 flex flex-col">
             <h4 class="text-xs text-gray-700 dark:text-white/40 font-medium">
               Me
             </h4>
             <div class="flex flex-col space-y-0.5">
-              <nuxt-link
+              <SidebarItem
                 v-for="item in navigationMe"
                 :key="item.name"
-                :to="item.href"
-                :class="[
-                  item.current
-                    ? 'dark:text-teal-400 dark:bg-gray-800 bg-gray-200/40 text-teal-500'
-                    : 'dark:text-white/40 text-gray-700 hover:text-teal-500 dark:hover:text-teal-400',
-                  'group flex items-center rounded-md py-2 space-x-[.625rem] px-3 transition-all ease-in duration-300',
-                ]"
-              >
-                <Icon
-                  :name="item.icon"
-                  :class="[
-                    item.current
-                      ? 'dark:text-teal-400 text-teal-500'
-                      : 'text-gray-700 dark:text-white/40 group-hover:text-teal-500 group:dark-hover:text-teal-400',
-                    'h-5 w-5 flex-shrink-0 transition-all ease-in duration-300',
-                  ]"
-                />
-                <span class="text-sm">
-                  {{ item.name }}
-                </span>
-              </nuxt-link>
+                :item="item"
+              />
             </div>
           </div>
           <div class="space-y-3 flex flex-col">
@@ -240,30 +145,11 @@
               Social
             </h4>
             <div class="flex flex-col space-y-0.5">
-              <nuxt-link
+              <SidebarItem
                 v-for="item in navigationSocial"
                 :key="item.name"
-                :to="item.href"
-                :class="[
-                  item.current
-                    ? 'dark:text-teal-400 dark:bg-gray-800 bg-gray-200/40 text-teal-500'
-                    : 'dark:text-white/40 text-gray-700 hover:text-teal-500 dark:hover:text-teal-400',
-                  'group flex items-center rounded-md py-2 space-x-[.625rem] px-3 transition-all ease-in duration-300',
-                ]"
-              >
-                <Icon
-                  :name="item.icon"
-                  :class="[
-                    item.current
-                      ? 'dark:text-teal-400 text-teal-500'
-                      : 'text-gray-700 dark:text-white/40 group-hover:text-teal-500 group:dark-hover:text-teal-400',
-                    'h-5 w-5 flex-shrink-0 transition-all ease-in duration-300',
-                  ]"
-                />
-                <span class="text-sm">
-                  {{ item.name }}
-                </span>
-              </nuxt-link>
+                :item="item"
+              />
             </div>
           </div>
         </nav>
@@ -274,85 +160,87 @@
 </template>
 
 <script setup lang="ts">
-import { useSidebarStore } from '~/store/sidebar'
-import { TransitionChild, TransitionRoot } from '@headlessui/vue'
+import { useSidebarStore } from '@/store/sidebar';
+import { TransitionChild, TransitionRoot } from '@headlessui/vue';
+import type { SidebarItem } from '@/types/navigation/Sidebar.types';
 
-const sidebar = useSidebarStore()
+const sidebar = useSidebarStore();
 
 const navigationMain = [
-  { name: 'Explore', href: '/', icon: 'heroicons:home', current: true },
+  { name: 'Explore', to: '/', icon: 'heroicons:home' },
   {
     name: 'Projects',
-    href: '/projects',
+    to: '/projects',
     icon: 'heroicons:briefcase',
-    current: false,
   },
-  { name: 'Writing', href: '#', icon: 'heroicons:newspaper', current: false },
-]
+  { name: 'Writing', to: '/writing', icon: 'heroicons:newspaper' },
+] as SidebarItem[];
 
 const navigationMe = [
-  { name: 'Bookmarks', href: '#', icon: 'heroicons:bookmark', current: false },
+  { name: 'Bookmarks', to: '#', icon: 'heroicons:bookmark' },
   {
     name: 'AMA',
-    href: '#',
+    to: '#',
     icon: 'heroicons:chat-bubble-left-right',
-    current: false,
   },
   {
     name: 'Stack',
-    href: '#',
+    to: '#',
     icon: 'heroicons:wrench-screwdriver',
-    current: false,
   },
-  { name: 'Now', href: '#', icon: 'heroicons:bolt', current: false },
+  { name: 'Now', to: '#', icon: 'heroicons:bolt' },
   {
     name: 'Hire Me',
-    href: '#',
+    to: '#',
     icon: 'iconoir:brain-electricity',
-    current: false,
   },
-]
+] as SidebarItem[];
 
 const navigationSocial = [
-  { name: 'Twitter', href: '#', icon: 'ph:twitter-logo', current: false },
+  { name: 'Twitter', to: '#', icon: 'ph:twitter-logo' },
   {
     name: 'LinkedIn',
-    href: '#',
+    to: '#',
     icon: 'ph:linkedin-logo',
-    current: false,
   },
-  { name: 'Github', href: '#', icon: 'ph:github-logo', current: false },
-]
+  { name: 'Github', to: '#', icon: 'ph:github-logo' },
+] as SidebarItem[];
 
 watch(
   () => sidebar.show,
   (value: boolean) => {
     if (!useNuxtApp().ssrContext) {
       if (value) {
-        hideScrollbar()
+        hideScrollbar();
       } else {
         setTimeout(() => {
-          showScrollbar()
-        }, 150)
+          showScrollbar();
+        }, 150);
       }
     }
   },
   { immediate: true }
-)
+);
+
+onUnmounted(() => {
+  setTimeout(() => {
+    sidebar.show && showScrollbar();
+  }, 150);
+});
 
 function showScrollbar() {
-  const body = document.body as HTMLElement
-  body.removeAttribute('style')
+  const body = document.body as HTMLElement;
+  body.removeAttribute('style');
 }
 
 function hideScrollbar() {
-  const body = document.body as HTMLElement
+  const body = document.body as HTMLElement;
 
-  let scrollbarWidth = window.innerWidth - document.documentElement.clientWidth
+  let scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
 
   if (scrollbarWidth != 0) {
-    body.style.paddingRight = `${scrollbarWidth}px`
+    body.style.paddingRight = `${scrollbarWidth}px`;
   }
-  body.style.overflow = 'hidden'
+  body.style.overflow = 'hidden';
 }
 </script>

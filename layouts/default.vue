@@ -16,18 +16,18 @@
 
 <script setup></script>
 <style lang="scss">
-::-webkit-scrollbar {
-  width: 6px;
-  height: 10px;
-  display: block;
-}
-
-::-webkit-scrollbar-thumb {
-  @apply bg-gray-400/50 dark:bg-gray-700/50;
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  @apply bg-gray-500/40 dark:bg-gray-700/60 cursor-pointer;
-}
+//::-webkit-scrollbar {
+//  width: 6px;
+//  height: 10px;
+//  display: block;
+//}
+//
+//::-webkit-scrollbar-thumb {
+//  @apply bg-gray-400/50 dark:bg-gray-700/50;
+//  border-radius: 5px;
+//}
+//
+//::-webkit-scrollbar-thumb:hover {
+//  @apply bg-gray-500/40 dark:bg-gray-700/60 cursor-pointer;
+//}
 </style>
