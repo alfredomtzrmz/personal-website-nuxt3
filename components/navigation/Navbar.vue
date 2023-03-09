@@ -1,14 +1,7 @@
 <template>
   <div class="navbar">
     <nuxt-link to="/about" class="flex items-center space-x-3">
-      <nuxt-img
-        src="/images/avatar.jpg"
-        format="png"
-        alt="alfredo-avatar"
-        class="h-10 w-10 rounded-full"
-        loading="lazy"
-        placeholder
-      />
+      <MainAvatar />
       <div class="flex flex-col text-sm">
         <h2 class="font-medium text-black dark:text-white">Alfredo Martínez</h2>
         <p class="text-gray-700 dark:text-white/40">FrontEnd Engineer</p>
@@ -29,6 +22,7 @@
 </template>
 <script setup>
 import { useSidebarStore } from '@/store/sidebar';
+import MainAvatar from '~/components/navigation/MainAvatar.vue';
 
 const sidebar = useSidebarStore();
 </script>

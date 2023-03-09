@@ -33,14 +33,7 @@
                   to="/about"
                   class="flex flex-shrink-0 items-center space-x-3 focus:outline-none focus:ring-0"
                 >
-                  <nuxt-img
-                    src="/images/avatar.jpg"
-                    format="png"
-                    alt="alfredo-avatar"
-                    class="h-10 w-10 rounded-full"
-                    loading="lazy"
-                    placeholder
-                  />
+                  <MainAvatar />
                   <div class="flex flex-col text-sm">
                     <h2 class="font-medium text-black dark:text-white">
                       Alfredo Martínez
@@ -106,14 +99,7 @@
           to="/about"
           class="flex flex-shrink-0 items-center space-x-3"
         >
-          <nuxt-img
-            src="/images/avatar.jpg"
-            format="png"
-            alt="alfredo-avatar"
-            class="h-10 w-10 rounded-full"
-            loading="lazy"
-            placeholder
-          />
+          <MainAvatar />
           <div class="flex flex-col text-sm">
             <h2 class="font-medium text-black dark:text-white">
               Alfredo Martínez

@@ -1,5 +1,6 @@
 <template>
   <div class="space-y-6">
+    {{ $colorMode.value }}
     <div class="flex flex-col space-y-4">
       <h1
         class="dark:text-gray-100 text-gray-700 text-4xl font-semibold xl:text-5xl"
