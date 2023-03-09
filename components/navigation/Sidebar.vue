@@ -26,9 +26,9 @@
         >
           <div class="relative flex w-[16rem] flex-col">
             <aside
-              class="flex min-h-0 flex-1 flex-col border-r bg-gray-50 overflow-y-auto px-6 transition duration-200 ease-in-out border-gray-150 dark:border-gray-800 dark:bg-gray-900"
+              class="flex min-h-0 flex-1 flex-col border-r bg-gray-50 overflow-y-auto transition duration-200 ease-in-out border-gray-150 dark:border-gray-800 dark:bg-gray-900"
             >
-              <div class="flex flex-1 flex-col pt-5">
+              <div class="flex flex-1 flex-col pt-5 px-4">
                 <nuxt-link
                   to="/about"
                   class="flex flex-shrink-0 items-center space-x-3 focus:outline-none focus:ring-0"
@@ -52,7 +52,7 @@
                 </nuxt-link>
                 <nav class="mt-10 flex-1 flex-col space-y-8">
                   <div class="space-y-0.5 flex flex-col">
-                    <SidebarItem
+                    <SidebarItemLink
                       v-for="item in navigationMain"
                       :key="item.name"
                       :item="item"
@@ -65,7 +65,7 @@
                       Me
                     </h4>
                     <div class="flex flex-col space-y-0.5">
-                      <SidebarItem
+                      <SidebarItemLink
                         v-for="item in navigationMe"
                         :key="item.name"
                         :item="item"
@@ -79,7 +79,7 @@
                       Social
                     </h4>
                     <div class="flex flex-col space-y-0.5">
-                      <SidebarItem
+                      <SidebarItemLink
                         v-for="item in navigationSocial"
                         :key="item.name"
                         :item="item"
@@ -89,6 +89,7 @@
                 </nav>
               </div>
               <!--bottom buttons-->
+              <SidebarBottom />
             </aside>
           </div>
         </TransitionChild>
@@ -98,9 +99,9 @@
   <!-- Static sidebar for desktop -->
   <aside class="hidden xl:fixed xl:inset-y-0 xl:flex xl:w-64 xl:flex-col">
     <div
-      class="flex min-h-0 flex-1 overflow-y-auto flex-col border-r bg-gray-50 px-6 transition duration-200 ease-in-out border-gray-150 dark:border-gray-800 dark:bg-gray-900"
+      class="flex min-h-0 flex-1 overflow-y-auto flex-col border-r bg-gray-50 transition duration-200 ease-in-out border-gray-150 dark:border-gray-800 dark:bg-gray-900"
     >
-      <div class="flex flex-1 flex-col pt-10 pb-4">
+      <div class="flex flex-1 flex-col pt-10 px-4">
         <nuxt-link
           to="/about"
           class="flex flex-shrink-0 items-center space-x-3"
@@ -122,7 +123,7 @@
         </nuxt-link>
         <nav class="mt-10 flex-1 flex-col space-y-8">
           <div class="space-y-0.5 flex flex-col">
-            <SidebarItem
+            <SidebarItemLink
               v-for="item in navigationMain"
               :key="item.name"
               :item="item"
@@ -133,7 +134,7 @@
               Me
             </h4>
             <div class="flex flex-col space-y-0.5">
-              <SidebarItem
+              <SidebarItemLink
                 v-for="item in navigationMe"
                 :key="item.name"
                 :item="item"
@@ -145,7 +146,7 @@
               Social
             </h4>
             <div class="flex flex-col space-y-0.5">
-              <SidebarItem
+              <SidebarItemLink
                 v-for="item in navigationSocial"
                 :key="item.name"
                 :item="item"
@@ -155,6 +156,7 @@
         </nav>
       </div>
       <!--bottom buttons-->
+      <SidebarBottom />
     </div>
   </aside>
 </template>

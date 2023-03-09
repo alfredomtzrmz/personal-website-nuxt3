@@ -32,6 +32,7 @@ export default defineNuxtConfig({
   },
   modules: [
     '@nuxtjs/tailwindcss',
+    // https://color-mode.nuxtjs.org/
     '@nuxtjs/color-mode',
     '@nuxtjs/google-fonts',
     '@nuxt/image-edge',
@@ -60,13 +61,13 @@ export default defineNuxtConfig({
   ],
   colorMode: {
     classSuffix: '',
+    storageKey: 'color-mode',
+    preference: 'system',
+    fallback: 'light',
   },
   googleFonts: {
     families: {
       Inter: {
-        wght: [100, 200, 300, 400, 500, 600, 700, 800, 900],
-      },
-      'DM+Sans': {
         wght: [100, 200, 300, 400, 500, 600, 700, 800, 900],
       },
     },

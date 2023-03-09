@@ -15,7 +15,7 @@
         I'm a Mexican FrontEnd developer. An enthusiast and lover of technology
         in all its orbit. I love grids, simplicity & good coffee. Apart being a
         practising minimalist and simple design addict, I’m also deeply into
-        FrontEnd technologies. As an autodidactic developer, I’m sensitive about
+        FrontEnd technologies. As an autodidact developer, I’m sensitive about
         important technical aspects and always seeking for self-improvement. I’m
         from Mexico and based near Guanajuato, talking English and Spanish
         natively.

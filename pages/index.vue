@@ -1,16 +1,16 @@
 <template>
-  <div class="dark:text-white">
-    <div class="">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, facilis
-      magni maxime sapiente sint sit. At, aut beatae blanditiis consectetur
-      deleniti deserunt dolor dolores ducimus eius eos eum, ex explicabo harum
-      id laboriosam natus odio officia pariatur quae quaerat quibusdam, quod
-      ratione repellat repellendus repudiandae soluta tempore. Accusamus aperiam
-      beatae, blanditiis commodi et eum facere fugiat laborum minus, nemo neque
-      non officiis pariatur possimus quibusdam, ratione sapiente sunt suscipit
-      tempora vel! Ad in optio quo repellendus voluptate. Ab accusamus atque
-      delectus dignissimos doloremque enim et eveniet ex expedita laudantium
-      maxime nemo nihil porro quae quasi, reiciendis repudiandae rerum suscipit
+  <div class="space-y-6">
+    <div class="flex flex-col space-y-4">
+      <h1
+        class="dark:text-gray-100 text-gray-700 text-4xl font-semibold xl:text-5xl"
+      >
+        Developing highly polished websites.
+      </h1>
+      <p class="font-medium text-gray-1000 dark:text-gray-100">
+        Product developer obsessed with Vue and Nuxt ecosystem. Creating
+        stunning digital products & helpful tools that give you an unfair
+        advantage online.
+      </p>
     </div>
   </div>
 </template>
