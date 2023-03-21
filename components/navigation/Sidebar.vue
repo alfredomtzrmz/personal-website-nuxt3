@@ -11,7 +11,7 @@
         leave-to="opacity-0"
       >
         <div
-          class="fixed inset-0 bg-white/50 backdrop-blur-sm dark:bg-storm-400"
+          class="fixed inset-0 bg-white/95 backdrop-blur-sm dark:bg-storm-400"
         />
       </TransitionChild>
       <div class="fixed inset-0 z-40 flex" @click="sidebar.close()">

@@ -35,6 +35,7 @@ export default defineNuxtConfig({
     // https://color-mode.nuxtjs.org/
     '@nuxtjs/color-mode',
     '@nuxtjs/google-fonts',
+    // https://v1.image.nuxtjs.org/get-started/
     '@nuxt/image-edge',
     '@vueuse/nuxt',
     // pinia plugin - https://pinia.esm.dev
