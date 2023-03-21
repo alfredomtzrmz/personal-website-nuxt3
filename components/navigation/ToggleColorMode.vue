@@ -5,7 +5,7 @@
   >
     <Icon
       name="ph:desktop-duotone"
-      class="h-6 w-6 dark:text-white/40 text-gray-700"
+      class="h-6 w-6 text-neutro-200 dark:text-neutro-100"
     />
   </button>
   <button

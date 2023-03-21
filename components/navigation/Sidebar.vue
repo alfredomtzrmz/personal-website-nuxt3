@@ -1,6 +1,6 @@
 <template>
   <TransitionRoot as="template" :show="sidebar.show">
-    <div class="relative z-40 xl:hidden sidebarWrapper">
+    <div class="relative z-40 xl:hidden">
       <TransitionChild
         as="template"
         enter="transition-opacity ease-linear duration-150"
@@ -11,7 +11,7 @@
         leave-to="opacity-0"
       >
         <div
-          class="fixed inset-0 dark:bg-gray-900/95 bg-gray-50/95 backdrop-blur-sm"
+          class="fixed inset-0 bg-white/50 backdrop-blur-sm dark:bg-storm-400"
         />
       </TransitionChild>
       <div class="fixed inset-0 z-40 flex" @click="sidebar.close()">
@@ -24,36 +24,34 @@
           leave-from="translate-x-0"
           leave-to="-translate-x-full"
         >
-          <div class="relative flex w-[16rem] flex-col">
-            <aside
-              class="flex min-h-0 flex-1 flex-col border-r bg-gray-50 overflow-y-auto transition duration-200 ease-in-out border-gray-150 dark:border-gray-800 dark:bg-gray-900"
-            >
-              <div class="flex flex-1 flex-col pt-5 px-4">
+          <div class="sidebar-mobile">
+            <aside class="sidebar-aside">
+              <div class="flex flex-1 flex-col px-6 pt-5">
                 <nuxt-link
                   to="/about"
                   class="flex flex-shrink-0 items-center space-x-3 focus:outline-none focus:ring-0"
                 >
                   <MainAvatar />
                   <div class="flex flex-col text-sm">
-                    <h2 class="font-medium text-black dark:text-white">
+                    <h2 class="text-storm-400 dark:text-white">
                       Alfredo Martínez
                     </h2>
-                    <p class="text-gray-700 dark:text-white/40">
+                    <p class="text-neutro-300 dark:text-neutro-500">
                       FrontEnd Engineer
                     </p>
                   </div>
                 </nuxt-link>
                 <nav class="mt-10 flex-1 flex-col space-y-8">
-                  <div class="space-y-0.5 flex flex-col">
+                  <div class="flex flex-col space-y-0.5">
                     <SidebarItemLink
                       v-for="item in navigationMain"
                       :key="item.name"
                       :item="item"
                     />
                   </div>
-                  <div class="space-y-3 flex flex-col">
+                  <div class="flex flex-col space-y-3">
                     <h4
-                      class="text-xs text-gray-700 dark:text-white/40 font-medium"
+                      class="text-[0.625rem] font-medium text-neutro-600 uppercase"
                     >
                       Me
                     </h4>
@@ -65,9 +63,9 @@
                       />
                     </div>
                   </div>
-                  <div class="space-y-3 flex flex-col">
+                  <div class="flex flex-col space-y-3">
                     <h4
-                      class="text-xs text-gray-700 dark:text-white/40 font-medium"
+                      class="text-[0.625rem] font-medium text-neutro-600 uppercase"
                     >
                       Social
                     </h4>
@@ -90,33 +88,31 @@
     </div>
   </TransitionRoot>
   <!-- Static sidebar for desktop -->
-  <aside class="hidden xl:fixed xl:inset-y-0 xl:flex xl:w-64 xl:flex-col">
-    <div
-      class="flex min-h-0 flex-1 overflow-y-auto flex-col border-r bg-gray-50 transition duration-200 ease-in-out border-gray-150 dark:border-gray-800 dark:bg-gray-900"
-    >
-      <div class="flex flex-1 flex-col pt-10 px-4">
+  <div class="sidebar-desktop">
+    <aside class="sidebar-aside">
+      <div class="flex flex-1 flex-col px-6 pt-10">
         <nuxt-link
           to="/about"
           class="flex flex-shrink-0 items-center space-x-3"
         >
           <MainAvatar />
           <div class="flex flex-col text-sm">
-            <h2 class="font-medium text-black dark:text-white">
-              Alfredo Martínez
-            </h2>
-            <p class="text-gray-700 dark:text-white/40">FrontEnd Engineer</p>
+            <h2 class="text-storm-400 dark:text-white">Alfredo Martínez</h2>
+            <p class="text-neutro-300 dark:text-neutro-500">
+              FrontEnd Engineer
+            </p>
           </div>
         </nuxt-link>
         <nav class="mt-10 flex-1 flex-col space-y-8">
-          <div class="space-y-0.5 flex flex-col">
+          <div class="flex flex-col space-y-0.5">
             <SidebarItemLink
               v-for="item in navigationMain"
               :key="item.name"
               :item="item"
             />
           </div>
-          <div class="space-y-3 flex flex-col">
-            <h4 class="text-xs text-gray-700 dark:text-white/40 font-medium">
+          <div class="flex flex-col space-y-3">
+            <h4 class="text-[0.625rem] font-medium text-neutro-600 uppercase">
               Me
             </h4>
             <div class="flex flex-col space-y-0.5">
@@ -127,8 +123,8 @@
               />
             </div>
           </div>
-          <div class="space-y-3 flex flex-col">
-            <h4 class="text-xs text-gray-700 dark:text-white/40 font-medium">
+          <div class="flex flex-col space-y-3">
+            <h4 class="text-[0.625rem] font-medium text-neutro-600 uppercase">
               Social
             </h4>
             <div class="flex flex-col space-y-0.5">
@@ -143,8 +139,8 @@
       </div>
       <!--bottom buttons-->
       <SidebarBottom />
-    </div>
-  </aside>
+    </aside>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -232,3 +228,20 @@ function hideScrollbar() {
   body.style.overflow = 'hidden';
 }
 </script>
+
+<style lang="scss">
+.sidebar {
+  &-mobile {
+    @apply relative flex flex-col w-[16rem];
+  }
+
+  &-desktop {
+    @apply hidden xl:fixed xl:inset-y-0 xl:flex xl:w-64 xl:flex-col;
+  }
+
+  &-aside {
+    @apply flex min-h-0 flex-1 flex-col overflow-y-auto border-r border-zinc-300
+    bg-zinc-100 transition duration-200 ease-in-out dark:border-storm-200 dark:bg-storm-300;
+  }
+}
+</style>

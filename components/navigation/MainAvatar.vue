@@ -13,8 +13,6 @@ import { computed } from 'vue';
 const colorMode = useColorMode();
 
 const avatarName = computed((): string =>
-  colorMode.value === 'dark'
-    ? '/images/avatar-dark.png'
-    : '/images/avatar-light.png'
+  colorMode.value === 'dark' ? '/images/avatar.png' : '/images/avatar.png'
 );
 </script>

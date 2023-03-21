@@ -2,23 +2,30 @@
   <nuxt-link
     :to="item.to"
     :class="[
-      isCurrent
-        ? 'dark:text-teal-400 dark:bg-gray-800 bg-gray-200/40 text-teal-500'
-        : 'dark:text-white/40 text-gray-700 hover:text-teal-500 dark:hover:text-teal-400',
-      'group flex items-center rounded-md py-2 space-x-[.625rem] px-3 transition-all ease-in duration-300',
+      'sidebar-item group',
+      {
+        'sidebar-item-current': isCurrent,
+      },
     ]"
     @click="sidebar.close()"
   >
     <Icon
       :name="item.icon"
       :class="[
-        isCurrent
-          ? 'dark:text-teal-400 text-teal-500'
-          : 'text-gray-700 dark:text-white/40 group-hover:text-teal-500 group:dark-hover:text-teal-400',
-        'h-5 w-5 flex-shrink-0 transition-all ease-in duration-300',
+        'sidebar-item-icon',
+        {
+          'sidebar-item-current-icon': isCurrent,
+        },
       ]"
     />
-    <span class="text-sm">
+    <span
+      :class="[
+        'sidebar-item-text',
+        {
+          'sidebar-item-current-text': isCurrent,
+        },
+      ]"
+    >
       {{ item.name }}
     </span>
   </nuxt-link>
@@ -44,3 +51,32 @@ const isCurrent = computed(() =>
     : routePath.value.startsWith(String(props.item.to)) && props.item.to !== '/'
 );
 </script>
+
+<style lang="scss">
+.sidebar-item {
+  @apply flex cursor-pointer items-center rounded-md border border-transparent px-3
+  transition-all duration-150 ease-in py-2 space-x-[.625rem];
+
+  &-icon {
+    @apply h-5 w-5 flex-shrink-0 text-neutro-200 dark:text-neutro-100 transition-all duration-150
+    ease-in group-hover:text-storm-400 dark:group-hover:text-white;
+  }
+
+  &-text {
+    @apply text-sm text-neutro-200 dark:text-neutro-100 transition-all duration-150 ease-in
+    group-hover:text-storm-400 dark:group-hover:text-white;
+  }
+
+  &-current {
+    @apply border-zinc-300 bg-white dark:border-storm-50 dark:bg-storm-100;
+
+    &-icon {
+      @apply text-storm-400 dark:text-white;
+    }
+
+    &-text {
+      @apply text-storm-400 dark:text-white;
+    }
+  }
+}
+</style>
