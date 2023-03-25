@@ -18,3 +18,14 @@
     />
   </button>
 </template>
+<script setup lang="ts">
+import { computed } from 'vue';
+
+const colorMode = useColorMode();
+
+const favicon = computed((): string =>
+  colorMode.value === 'dark' ? '/favicon-dark.png' : '/favicon-light.png'
+);
+
+useFavicon(favicon);
+</script>

@@ -51,11 +51,11 @@
                   </div>
                   <div class="flex flex-col space-y-3">
                     <h4 class="text-sxs font-medium text-neutro-600 uppercase">
-                      Me
+                      Resources
                     </h4>
                     <div class="flex flex-col space-y-0.5">
                       <SidebarItemLink
-                        v-for="item in navigationMe"
+                        v-for="item in navigationResources"
                         :key="item.name"
                         :item="item"
                       />
@@ -91,7 +91,7 @@
           to="/about"
           class="flex flex-shrink-0 items-center space-x-3"
         >
-          <MainAvatar />
+          <MainAvatar placeholder />
           <div class="flex flex-col text-sm">
             <h2 class="text-storm-400 dark:text-white">Alfredo Martínez</h2>
             <p class="text-neutro-300 dark:text-neutro-500">
@@ -108,10 +108,12 @@
             />
           </div>
           <div class="flex flex-col space-y-3">
-            <h4 class="text-sxs font-medium text-neutro-600 uppercase">Me</h4>
+            <h4 class="text-sxs font-medium text-neutro-600 uppercase">
+              Resources
+            </h4>
             <div class="flex flex-col space-y-0.5">
               <SidebarItemLink
-                v-for="item in navigationMe"
+                v-for="item in navigationResources"
                 :key="item.name"
                 :item="item"
               />
@@ -153,9 +155,22 @@ const navigationMain = [
     badge: 'soon',
   },
   { name: 'Writing', to: '#', icon: 'heroicons:newspaper', badge: 'soon' },
+  {
+    name: 'Mentoring',
+    to: '#',
+    icon: 'iconoir:brain-electricity',
+    badge: 'soon',
+  },
+  {
+    name: 'Hire Me',
+    to: '#',
+    icon: 'fluent:handshake-16-regular',
+    badge: 'soon',
+  },
+  { name: 'Now', to: '#', icon: 'heroicons:bolt', badge: 'soon' },
 ] as SidebarItem[];
 
-const navigationMe = [
+const navigationResources = [
   { name: 'Bookmarks', to: '#', icon: 'heroicons:bookmark', badge: 'soon' },
   {
     name: 'AMA',
@@ -167,13 +182,6 @@ const navigationMe = [
     name: 'Stack',
     to: '#',
     icon: 'heroicons:wrench-screwdriver',
-    badge: 'soon',
-  },
-  { name: 'Now', to: '#', icon: 'heroicons:bolt', badge: 'soon' },
-  {
-    name: 'Hire Me',
-    to: '#',
-    icon: 'iconoir:brain-electricity',
     badge: 'soon',
   },
 ] as SidebarItem[];

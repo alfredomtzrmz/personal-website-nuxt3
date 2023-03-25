@@ -2,7 +2,14 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
+      link: [
+        {
+          hid: 'icon',
+          rel: 'icon',
+          type: 'image/png',
+          href: '/favicon-dark.png',
+        },
+      ],
       htmlAttrs: {
         lang: 'es-MX',
       },

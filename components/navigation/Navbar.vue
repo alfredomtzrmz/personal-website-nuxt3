@@ -1,7 +1,7 @@
 <template>
   <div class="navbar">
     <nuxt-link to="/about" class="flex items-center space-x-3">
-      <MainAvatar />
+      <MainAvatar placeholder />
       <div class="flex flex-col text-sm">
         <h2 class="text-storm-400 dark:text-white">Alfredo Martínez</h2>
         <p class="text-neutro-300 dark:text-neutro-500">FrontEnd Engineer</p>
