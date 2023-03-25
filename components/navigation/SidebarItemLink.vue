@@ -1,6 +1,7 @@
 <template>
   <nuxt-link
     :to="item.to"
+    :target="item.target || '_self'"
     :class="[
       'sidebar-item group',
       {
@@ -9,25 +10,30 @@
     ]"
     @click="sidebar.close()"
   >
-    <Icon
-      :name="item.icon"
-      :class="[
-        'sidebar-item-icon',
-        {
-          'sidebar-item-current-icon': isCurrent,
-        },
-      ]"
-    />
-    <span
-      :class="[
-        'sidebar-item-text',
-        {
-          'sidebar-item-current-text': isCurrent,
-        },
-      ]"
-    >
-      {{ item.name }}
-    </span>
+    <div class="flex items-center space-x-[.625rem]">
+      <Icon
+        :name="item.icon"
+        :class="[
+          'sidebar-item-icon',
+          {
+            'sidebar-item-current-icon': isCurrent,
+          },
+        ]"
+      />
+      <span
+        :class="[
+          'sidebar-item-text',
+          {
+            'sidebar-item-current-text': isCurrent,
+          },
+        ]"
+      >
+        {{ item.name }}
+      </span>
+    </div>
+    <BaseBadge v-if="showBadge" size="sm" class="ml-auto">
+      {{ item.badge }}
+    </BaseBadge>
   </nuxt-link>
 </template>
 
@@ -50,12 +56,14 @@ const isCurrent = computed(() =>
     ? true
     : routePath.value.startsWith(String(props.item.to)) && props.item.to !== '/'
 );
+
+const showBadge = computed(() => props.item.badge !== undefined);
 </script>
 
 <style lang="scss">
 .sidebar-item {
   @apply flex cursor-pointer items-center rounded-md border border-transparent px-3
-  transition-all duration-150 ease-in py-2 space-x-[.625rem];
+  transition-colors duration-200 ease-in-out py-2;
 
   &-icon {
     @apply h-5 w-5 flex-shrink-0 text-neutro-200 dark:text-neutro-100 transition-all duration-150

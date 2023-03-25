@@ -1,0 +1,11 @@
+.base-badge {
+  @apply flex items-center rounded-md border border-zinc-300 font-medium uppercase transition-colors duration-200 ease-in-out text-neutro-300 dark:border-storm-200 dark:text-neutro-500;
+
+  &--sm{
+    @apply text-[0.5rem] py-[0.1875rem] px-[0.375rem]
+  }
+
+  &--md {
+    @apply text-sxs px-[0.75rem] py-[0.25rem];
+  }
+}

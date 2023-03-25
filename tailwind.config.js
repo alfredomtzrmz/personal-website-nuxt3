@@ -46,9 +46,11 @@ module.exports = {
       teal: colors.teal,
     },
     extend: {
+      fontSize: {
+        sxs: '0.625rem',
+      },
       fontFamily: {
         inter: ['Inter'],
-        dm: ['DM Sans'],
       },
     },
   },

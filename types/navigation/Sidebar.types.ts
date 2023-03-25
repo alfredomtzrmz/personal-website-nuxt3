@@ -5,4 +5,6 @@ export interface SidebarItem {
   to: string | RouteLocationRaw;
   target?: '_blank' | '_parent' | '_self' | '_top' | (string & object) | null;
   icon: string;
+
+  badge?: string;
 }

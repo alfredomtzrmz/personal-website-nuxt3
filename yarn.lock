@@ -1062,7 +1062,7 @@
 
 "@types/web-bluetooth@^0.0.16":
   version "0.0.16"
-  resolved "https://registry.npmjs.org/@types/web-bluetooth/-/web-bluetooth-0.0.16.tgz"
+  resolved "https://registry.yarnpkg.com/@types/web-bluetooth/-/web-bluetooth-0.0.16.tgz#1d12873a8e49567371f2a75fe3e7f7edca6662d8"
   integrity sha512-oh8q2Zc32S6gd/j50GowEjKLoOVOwHP/bWVjKJInBwQqdOYMdPrf1oVlelTlyfFK3CKxL1uahMDAr+vy8T7yMQ==
 
 "@typescript-eslint/eslint-plugin@^5.6.0":
@@ -1341,14 +1341,14 @@
   resolved "https://registry.npmjs.org/@vue/shared/-/shared-3.2.45.tgz"
   integrity sha512-Ewzq5Yhimg7pSztDV+RH1UDKBzmtqieXQlpTVm2AwraoRL/Rks96mvd8Vgi7Lj+h+TH8dv7mXD3FRZR3TUvbSg==
 
-"@vueuse/core@9.11.1":
-  version "9.11.1"
-  resolved "https://registry.npmjs.org/@vueuse/core/-/core-9.11.1.tgz"
-  integrity sha512-E/cizD1w9ILkq4axYjZrXLkKaBfzloaby2n3NMjUfd6yI/jkfTVgc6iwy/Cw2e++Ld4LphGbO+3MhzizvwUslQ==
+"@vueuse/core@9.13.0":
+  version "9.13.0"
+  resolved "https://registry.yarnpkg.com/@vueuse/core/-/core-9.13.0.tgz#2f69e66d1905c1e4eebc249a01759cf88ea00cf4"
+  integrity sha512-pujnclbeHWxxPRqXWmdkKV5OX4Wk4YeK7wusHqRwU0Q7EFusHoqNA/aPhB6KCh9hEqJkLAJo7bb0Lh9b+OIVzw==
   dependencies:
     "@types/web-bluetooth" "^0.0.16"
-    "@vueuse/metadata" "9.11.1"
-    "@vueuse/shared" "9.11.1"
+    "@vueuse/metadata" "9.13.0"
+    "@vueuse/shared" "9.13.0"
     vue-demi "*"
 
 "@vueuse/head@^1.0.23":
@@ -1361,26 +1361,26 @@
     "@unhead/ssr" "^1.0.18"
     "@unhead/vue" "^1.0.18"
 
-"@vueuse/metadata@9.11.1":
-  version "9.11.1"
-  resolved "https://registry.npmjs.org/@vueuse/metadata/-/metadata-9.11.1.tgz"
-  integrity sha512-ABjkrG+VXggNhjfGyw5e/sekxTZfXTwjrYXkkWQmQ7Biyv+Gq9UD6IDNfeGvQZEINI0Qzw6nfuO2UFCd3hlrxQ==
+"@vueuse/metadata@9.13.0":
+  version "9.13.0"
+  resolved "https://registry.yarnpkg.com/@vueuse/metadata/-/metadata-9.13.0.tgz#bc25a6cdad1b1a93c36ce30191124da6520539ff"
+  integrity sha512-gdU7TKNAUVlXXLbaF+ZCfte8BjRJQWPCa2J55+7/h+yDtzw3vOoGQDRXzI6pyKyo6bXFT5/QoPE4hAknExjRLQ==
 
-"@vueuse/nuxt@^9.11.1":
-  version "9.11.1"
-  resolved "https://registry.npmjs.org/@vueuse/nuxt/-/nuxt-9.11.1.tgz"
-  integrity sha512-hiiRzLgsH5nTAb2TChyFc6nykIyTB3MnCEhILg44Ug9ILC3vG/qnHnv3zRtIu4bXNOhDQN5shfnchgGPJFf8PA==
+"@vueuse/nuxt@^9.13.0":
+  version "9.13.0"
+  resolved "https://registry.yarnpkg.com/@vueuse/nuxt/-/nuxt-9.13.0.tgz#32bc95df0fb0e54aa60379ef009c6985e8f50be1"
+  integrity sha512-JunH/w6nFIwCyaZ0s+pfrYFMfBzGfhkwmFPz7ogHFmb71Ty/5HINrYOAOZCXpN44X6QH6FiJq/wuLLdvYzqFUw==
   dependencies:
-    "@nuxt/kit" "^3.0.0"
-    "@vueuse/core" "9.11.1"
-    "@vueuse/metadata" "9.11.1"
-    local-pkg "^0.4.2"
+    "@nuxt/kit" "^3.2.0"
+    "@vueuse/core" "9.13.0"
+    "@vueuse/metadata" "9.13.0"
+    local-pkg "^0.4.3"
     vue-demi "*"
 
-"@vueuse/shared@9.11.1":
-  version "9.11.1"
-  resolved "https://registry.npmjs.org/@vueuse/shared/-/shared-9.11.1.tgz"
-  integrity sha512-UTZYGAjT96hWn4buf4wstZbeheBVNcKPQuej6qpoSkjF1atdaeCD6kqm9uGL2waHfisSgH9mq0qCRiBOk5C/2w==
+"@vueuse/shared@9.13.0":
+  version "9.13.0"
+  resolved "https://registry.yarnpkg.com/@vueuse/shared/-/shared-9.13.0.tgz#089ff4cc4e2e7a4015e57a8f32e4b39d096353b9"
+  integrity sha512-UrnhU+Cnufu4S6JLCPZnkWh0WwZGUp72ktOF2DFptMlOs3TOdVv8xJN53zhHGARmVOsz5KqOls09+J1NR6sBKw==
   dependencies:
     vue-demi "*"
 
@@ -4219,11 +4219,6 @@ loader-utils@^2.0.0:
     big.js "^5.2.2"
     emojis-list "^3.0.0"
     json5 "^2.1.2"
-
-local-pkg@^0.4.2:
-  version "0.4.2"
-  resolved "https://registry.npmjs.org/local-pkg/-/local-pkg-0.4.2.tgz"
-  integrity sha512-mlERgSPrbxU3BP4qBqAvvwlgW4MTg78iwJdGGnv7kibKjWcJksrG3t6LB5lXI93wXRDvG4NpUgJFmTG4T6rdrg==
 
 local-pkg@^0.4.3:
   version "0.4.3"

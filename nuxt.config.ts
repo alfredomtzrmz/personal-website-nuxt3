@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   app: {
     head: {
+      link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
       htmlAttrs: {
         lang: 'es-MX',
       },
@@ -21,10 +22,11 @@ export default defineNuxtConfig({
       title: 'Alfredo Martínez | FrontEnd Engineer',
       bodyAttrs: {
         class:
-          'antialiased font-inter bg-zinc-50 dark:bg-storm-400 transition-colors duration-100 h-full',
+          'antialiased font-inter bg-zinc-50 dark:bg-storm-400 transition-colors duration-200 ease-in-out h-full',
       },
     },
   },
+  css: ['@/assets/scss/main.scss'],
   appConfig: {
     nuxtIcon: {
       size: '16px',
@@ -37,6 +39,7 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     // https://v1.image.nuxtjs.org/get-started/
     '@nuxt/image-edge',
+    // https://nuxt.com/modules/vueuse
     '@vueuse/nuxt',
     // pinia plugin - https://pinia.esm.dev
     '@pinia/nuxt',
@@ -63,8 +66,8 @@ export default defineNuxtConfig({
   colorMode: {
     classSuffix: '',
     storageKey: 'color-mode',
-    preference: 'system',
-    fallback: 'light',
+    preference: 'dark',
+    fallback: 'dark',
   },
   googleFonts: {
     families: {

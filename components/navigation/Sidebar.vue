@@ -11,7 +11,7 @@
         leave-to="opacity-0"
       >
         <div
-          class="fixed inset-0 bg-white/95 backdrop-blur-sm dark:bg-storm-400"
+          class="fixed transition-colors duration-200 inset-0 bg-white/95 backdrop-blur-sm dark:bg-storm-400"
         />
       </TransitionChild>
       <div class="fixed inset-0 z-40 flex" @click="sidebar.close()">
@@ -50,9 +50,7 @@
                     />
                   </div>
                   <div class="flex flex-col space-y-3">
-                    <h4
-                      class="text-[0.625rem] font-medium text-neutro-600 uppercase"
-                    >
+                    <h4 class="text-sxs font-medium text-neutro-600 uppercase">
                       Me
                     </h4>
                     <div class="flex flex-col space-y-0.5">
@@ -64,9 +62,7 @@
                     </div>
                   </div>
                   <div class="flex flex-col space-y-3">
-                    <h4
-                      class="text-[0.625rem] font-medium text-neutro-600 uppercase"
-                    >
+                    <h4 class="text-sxs font-medium text-neutro-600 uppercase">
                       Social
                     </h4>
                     <div class="flex flex-col space-y-0.5">
@@ -112,9 +108,7 @@
             />
           </div>
           <div class="flex flex-col space-y-3">
-            <h4 class="text-[0.625rem] font-medium text-neutro-600 uppercase">
-              Me
-            </h4>
+            <h4 class="text-sxs font-medium text-neutro-600 uppercase">Me</h4>
             <div class="flex flex-col space-y-0.5">
               <SidebarItemLink
                 v-for="item in navigationMe"
@@ -124,7 +118,7 @@
             </div>
           </div>
           <div class="flex flex-col space-y-3">
-            <h4 class="text-[0.625rem] font-medium text-neutro-600 uppercase">
+            <h4 class="text-sxs font-medium text-neutro-600 uppercase">
               Social
             </h4>
             <div class="flex flex-col space-y-0.5">
@@ -151,43 +145,58 @@ import type { SidebarItem } from '@/types/navigation/Sidebar.types';
 const sidebar = useSidebarStore();
 
 const navigationMain = [
-  { name: 'Explore', to: '/', icon: 'heroicons:home' },
+  { name: 'Home', to: '/', icon: 'heroicons:home' },
   {
     name: 'Projects',
-    to: '/projects',
+    to: '#',
     icon: 'heroicons:briefcase',
+    badge: 'soon',
   },
-  { name: 'Writing', to: '/writing', icon: 'heroicons:newspaper' },
+  { name: 'Writing', to: '#', icon: 'heroicons:newspaper', badge: 'soon' },
 ] as SidebarItem[];
 
 const navigationMe = [
-  { name: 'Bookmarks', to: '#', icon: 'heroicons:bookmark' },
+  { name: 'Bookmarks', to: '#', icon: 'heroicons:bookmark', badge: 'soon' },
   {
     name: 'AMA',
     to: '#',
     icon: 'heroicons:chat-bubble-left-right',
+    badge: 'soon',
   },
   {
     name: 'Stack',
     to: '#',
     icon: 'heroicons:wrench-screwdriver',
+    badge: 'soon',
   },
-  { name: 'Now', to: '#', icon: 'heroicons:bolt' },
+  { name: 'Now', to: '#', icon: 'heroicons:bolt', badge: 'soon' },
   {
     name: 'Hire Me',
     to: '#',
     icon: 'iconoir:brain-electricity',
+    badge: 'soon',
   },
 ] as SidebarItem[];
 
 const navigationSocial = [
-  { name: 'Twitter', to: '#', icon: 'ph:twitter-logo' },
+  {
+    name: 'Twitter',
+    to: 'https://twitter.com/alfredo_mtzrmz',
+    target: '_blank',
+    icon: 'ph:twitter-logo',
+  },
   {
     name: 'LinkedIn',
-    to: '#',
+    to: 'https://www.linkedin.com/in/isidromar95/',
+    target: '_blank',
     icon: 'ph:linkedin-logo',
   },
-  { name: 'Github', to: '#', icon: 'ph:github-logo' },
+  {
+    name: 'Github',
+    to: 'https://github.com/IsidroMar95',
+    target: '_blank',
+    icon: 'ph:github-logo',
+  },
 ] as SidebarItem[];
 
 watch(
@@ -241,7 +250,7 @@ function hideScrollbar() {
 
   &-aside {
     @apply flex min-h-0 flex-1 flex-col overflow-y-auto border-r border-zinc-300
-    bg-zinc-100 transition duration-200 ease-in-out dark:border-storm-200 dark:bg-storm-300;
+    bg-zinc-100 transition-colors duration-200 ease-in-out dark:border-storm-200 dark:bg-storm-300;
   }
 }
 </style>

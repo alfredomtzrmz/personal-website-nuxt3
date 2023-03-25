@@ -13,12 +13,11 @@
     <div class="flex-col flex space-y-6">
       <p class="text-neutro-300 dark:text-neutro-400 text-sm">
         I'm a Mexican FrontEnd developer. An enthusiast and lover of technology
-        in all its orbit. I love grids, simplicity & good coffee. Apart being a
-        practising minimalist and simple design addict, I’m also deeply into
-        FrontEnd technologies. As an autodidact developer, I’m sensitive about
-        important technical aspects and always seeking for self-improvement. I’m
-        from Mexico and based near Guanajuato, talking English and Spanish
-        natively.
+        in all its orbit. I love simplicity, good coffee & stunning designs.
+        Apart being a practising minimalist and simple design addict, I’m also
+        deeply into FrontEnd technologies. As an autodidact developer, I’m
+        sensitive about important technical aspects and always seeking for
+        self-improvement. I’m from Mexico talking English and Spanish natively.
       </p>
       <div
         class="p-6 bg-zinc-100 border-zinc-300 dark:bg-storm-300 dark:border-storm-200 rounded-md border-2 border-dotted flex flex-col space-y-2"
@@ -27,11 +26,11 @@
           Manifesto.
         </h5>
         <p class="text-neutro-300 dark:text-neutro-400 text-sm">
-          I build polished user interfaces for the web and everything in
-          between. Together with other UX designers, we create digital
-          experiences with great attention and care. Not just because of the
-          high conversion rates, but because of them, the people who use it. I
-          make it shine, I do my best.
+          I build polished user interfaces for the web, mobile apps and
+          everything in between. Alongside with other UX designers, we create
+          digital experiences with great attention and care. Not just because of
+          the high conversion rates, but because of them, the people who use it.
+          I make it shine, I do my best.
           <span class="dark:text-teal-400 text-teal-500 italic"> Always </span>
         </p>
       </div>
