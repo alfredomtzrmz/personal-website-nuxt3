@@ -182,7 +182,7 @@ const navigationResources = [
     name: 'Stack',
     to: '/stack',
     icon: 'heroicons:wrench-screwdriver',
-    badge: 'soon',
+    badge: 'new',
   },
 ] as SidebarItem[];
 
