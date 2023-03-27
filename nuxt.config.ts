@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  ssr: true,
   app: {
     head: {
       link: [
@@ -52,6 +53,8 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     // nuxt-icon - https://nuxt.com/modules/icon
     'nuxt-icon',
+    // https://supabase.nuxtjs.org/
+    '@nuxtjs/supabase',
   ],
   build: {
     transpile: ['@headlessui/vue'],

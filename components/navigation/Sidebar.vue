@@ -180,7 +180,7 @@ const navigationResources = [
   },
   {
     name: 'Stack',
-    to: '#',
+    to: '/stack',
     icon: 'heroicons:wrench-screwdriver',
     badge: 'soon',
   },
