@@ -1,17 +1,18 @@
 <template>
-  <nuxt-link to="#" class="stack">
-    <img
-      :src="props.item.image_src"
-      class="stack-logo"
+  <nuxt-link :to="`/stack/${props.item.slug}`" class="stack">
+    <NuxtImg
+      provider="imagekit"
+      :src="props.item.icon_src"
       :alt="props.item.name"
+      class="stack-logo"
+      placeholder
     />
-
     <div class="flex flex-col">
       <span class="text-sm font-medium text-storm-400 dark:text-white">
         {{ props.item.name }}
       </span>
       <p class="text-sm text-neutro-300">
-        {{ props.item.category }}
+        {{ props.item.categories.name }}
       </p>
     </div>
   </nuxt-link>
@@ -19,11 +20,11 @@
 
 <script setup lang="ts">
 import type { PropType } from 'vue';
-import type { StackItem } from '~/types/StackItem.types';
+import type { Stack } from '@/types/Stack.types';
 
 const props = defineProps({
   item: {
-    type: Object as PropType<StackItem>,
+    type: Object as PropType<Stack>,
     default: () => ({}),
   },
 });

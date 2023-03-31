@@ -44,6 +44,9 @@ module.exports = {
         400: '#161616',
       },
       teal: colors.teal,
+      green: colors.emerald,
+      yellow: colors.amber,
+      purple: colors.violet,
     },
     extend: {
       fontSize: {

@@ -62,17 +62,14 @@ const showBadge = computed(() => props.item.badge !== undefined);
 
 <style lang="scss">
 .sidebar-item {
-  @apply flex cursor-pointer items-center rounded-md border border-transparent px-3
-  transition-colors duration-200 ease-in-out py-2;
+  @apply flex cursor-pointer items-center rounded-md border border-transparent px-3 transition-colors duration-200 ease-in-out py-2;
 
   &-icon {
-    @apply h-5 w-5 flex-shrink-0 text-neutro-200 dark:text-neutro-100 transition-all duration-150
-    ease-in group-hover:text-storm-400 dark:group-hover:text-white;
+    @apply h-5 w-5 flex-shrink-0 text-neutro-200 dark:text-neutro-100 transition-all duration-150 ease-in group-hover:text-storm-400 dark:group-hover:text-white;
   }
 
   &-text {
-    @apply text-sm text-neutro-200 dark:text-neutro-100 transition-all duration-150 ease-in
-    group-hover:text-storm-400 dark:group-hover:text-white;
+    @apply text-sm text-neutro-200 dark:text-neutro-100 transition-all duration-150 ease-in group-hover:text-storm-400 dark:group-hover:text-white;
   }
 
   &-current {

@@ -11,7 +11,7 @@
         leave-to="opacity-0"
       >
         <div
-          class="fixed transition-colors duration-200 inset-0 bg-white/95 backdrop-blur-sm dark:bg-storm-400"
+          class="fixed transition-colors duration-150 inset-0 bg-white/95 backdrop-blur-sm dark:bg-storm-400"
         />
       </TransitionChild>
       <div class="fixed inset-0 z-40 flex" @click="sidebar.close()">
@@ -26,7 +26,7 @@
         >
           <div class="sidebar-mobile">
             <aside class="sidebar-aside">
-              <div class="flex flex-1 flex-col px-6 pt-5">
+              <div class="flex flex-1 flex-col px-6 py-5">
                 <nuxt-link
                   to="/about"
                   class="flex flex-shrink-0 items-center space-x-3 focus:outline-none focus:ring-0"
@@ -86,7 +86,7 @@
   <!-- Static sidebar for desktop -->
   <div class="sidebar-desktop">
     <aside class="sidebar-aside">
-      <div class="flex flex-1 flex-col px-6 pt-10">
+      <div class="flex flex-1 flex-col px-6 py-10">
         <nuxt-link
           to="/about"
           class="flex flex-shrink-0 items-center space-x-3"

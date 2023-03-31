@@ -33,6 +33,7 @@ export default defineNuxtConfig({
           'antialiased font-inter bg-zinc-50 dark:bg-storm-400 transition-colors duration-200 ease-in-out h-full',
       },
     },
+    pageTransition: { name: 'fade', mode: 'out-in' },
   },
   css: ['@/assets/scss/main.scss'],
   appConfig: {
@@ -84,6 +85,12 @@ export default defineNuxtConfig({
       Inter: {
         wght: [100, 200, 300, 400, 500, 600, 700, 800, 900],
       },
+    },
+  },
+  image: {
+    provider: 'imagekit',
+    imagekit: {
+      baseURL: 'https://ik.imagekit.io/alfredom',
     },
   },
   runtimeConfig: {},
