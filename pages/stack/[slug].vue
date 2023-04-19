@@ -25,7 +25,6 @@
           loading="lazy"
           placeholder
           :alt="stack.name"
-          @load="onLoad"
         />
         <div class="stack-details-header-text">
           <div class="stack-details-header-text-name">
@@ -37,7 +36,11 @@
         </div>
       </div>
       <div class="stack-details-content">
-        <StackScreenshot :items="stack.screenshots_src" :alt="stack.name" />
+        <StackScreenshot
+          :src="stack.screenshot_src"
+          :alt="stack.name"
+          @on-load="onLoad"
+        />
         <template v-if="showDescription">
           <p class="stack-details-content-description">
             {{ stack.description }}
@@ -76,7 +79,7 @@ const {
     name,
     icon_src,
     url,
-    screenshots_src,
+    screenshot_src,
     description,
     slug,
      tags(

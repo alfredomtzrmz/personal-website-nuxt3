@@ -4,7 +4,7 @@ export interface Stack {
   name: string;
   slug: string;
   icon_src: string;
-  screenshots_src: string[];
+  screenshot_src: string;
   description: string;
   categories: Category;
   tags: Tag;

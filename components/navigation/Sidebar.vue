@@ -201,7 +201,7 @@ const navigationSocial = [
   },
   {
     name: 'Github',
-    to: 'https://github.com/IsidroMar95',
+    to: 'https://github.com/alfredomtzrmz',
     target: '_blank',
     icon: 'ph:github-logo',
   },

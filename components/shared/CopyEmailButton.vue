@@ -9,7 +9,7 @@
       name="ion:copy-outline"
       class="w-4 h-4 text-neutro-300"
     />
-    <Icon v-else name="ion:copy" class="w-4 h-4 text-neutro-300" />
+    <Icon v-else name="ic:twotone-check" class="w-4 h-4 text-neutro-300" />
     <span> E-Mail </span>
   </BaseButton>
 </template>

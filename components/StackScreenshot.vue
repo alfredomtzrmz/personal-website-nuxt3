@@ -1,21 +1,18 @@
 <template>
   <NuxtImg
-    :src="source"
-    :alt="altSource"
-    class="inline-block rounded-md"
+    :src="props.src"
+    :alt="props.alt"
+    class="stack-screenshot"
     :placeholder="[672, 484.95, -100]"
+    @load="handleOnLoad"
   />
 </template>
 
 <script setup lang="ts">
-import type { PropType } from 'vue';
-
-const colorMode = useColorMode();
-
 const props = defineProps({
-  items: {
-    type: Array as PropType<string[]>,
-    default: () => [],
+  src: {
+    type: String,
+    default: '',
   },
   alt: {
     type: String,
@@ -23,13 +20,15 @@ const props = defineProps({
   },
 });
 
-const source = computed((): string =>
-  colorMode.preference === 'dark' ? props.items[0] : props.items[1]
-);
+const emit = defineEmits(['onLoad']);
 
-const altSource = computed((): string =>
-  colorMode.preference === 'dark' ? `${props.alt}-dark` : `${props.alt}-light`
-);
+function handleOnLoad() {
+  emit('onLoad');
+}
 </script>
 
-<style scoped></style>
+<style lang="scss" scoped>
+.stack-screenshot {
+  @apply inline-block rounded-md;
+}
+</style>
