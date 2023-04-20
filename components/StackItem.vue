@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link :to="`/stack/${props.item.slug}`" class="stack">
+  <nuxt-link :to="toSlug" class="stack">
     <NuxtImg
       provider="imagekit"
       :src="props.item.icon_src"
@@ -28,11 +28,13 @@ const props = defineProps({
     default: () => ({}),
   },
 });
+
+const toSlug = computed(() => `/stack/${props.item.slug}`);
 </script>
 
 <style lang="scss" scoped>
 .stack {
-  @apply flex gap-4 rounded-md p-3 transition-colors duration-200 ease-in-out hover:bg-zinc-100 dark:hover:bg-storm-300;
+  @apply cursor-pointer flex gap-4 rounded-md p-3 transition-colors duration-200 ease-in-out hover:bg-zinc-100 dark:hover:bg-storm-300;
 
   &-logo {
     //border border-zinc-300 transition-colors duration-200 ease-in-out dark:border-storm-200

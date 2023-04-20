@@ -19,7 +19,6 @@
 </template>
 
 <script setup lang="ts">
-import IconPending from '~/components/shared/IconPending.vue';
 import { Stack } from '@/types/Stack.types';
 
 const client = useSupabaseClient();
