@@ -195,7 +195,7 @@ const navigationSocial = [
   },
   {
     name: 'LinkedIn',
-    to: 'https://www.linkedin.com/in/isidromar95/',
+    to: 'https://linkedin.com/in/alfredomtzrmz',
     target: '_blank',
     icon: 'ph:linkedin-logo',
   },
